@@ -31,6 +31,8 @@ function m3uRouter(app, utils) {
   }
 
   app.get('/plugin/m3u', utils.prepareTree, unrarPath)
+
+  return app
 }
 
 module.exports = m3uRouter
