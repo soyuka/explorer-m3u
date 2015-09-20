@@ -7,7 +7,7 @@
 function registerHooks(config, route, user) {
   return {
     //hooking on directory
-    directory: function(tree, user) {
+    directory: function(tree) {
       var l = tree.length
       var found = false
 
