@@ -30,7 +30,7 @@ function m3uRouter(app, utils) {
     })
   }
 
-  app.get('/plugin/m3u', utils.prepareTree, unrarPath)
+  app.get('/', utils.prepareTree, unrarPath)
 
   return app
 }

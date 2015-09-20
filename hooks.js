@@ -28,7 +28,7 @@ function registerHooks(config) {
         return '' //don't polute view
       
       //Directory hook wants a <dd> element, adding our route
-      return '<dd><a href="plugin/m3u?path='+e.dirname+'&key='+user.key+'">M3u</a></dd>'
+      return '<dd><a href="/p/m3u?path='+e.dirname+'&key='+user.key+'">M3u</a></dd>'
     }
   }
 }
