@@ -11,7 +11,7 @@ var eol = require('os').EOL
 function m3uRouter(app, utils) {
   var HTTPError = utils.HTTPError
 
-  function unrarPath(req, res, next) {
+  function m3u(req, res, next) {
     req.options = util._extend(req.options, {maxDepth: 1, limit: Infinity})
     utils.tree(req.query.path, req.options) 
     .then(function(paths) {
@@ -30,7 +30,7 @@ function m3uRouter(app, utils) {
     })
   }
 
-  app.get('/', utils.prepareTree, unrarPath)
+  app.get('/', utils.prepareTree, m3u)
 
   return app
 }

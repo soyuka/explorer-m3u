@@ -4,10 +4,10 @@
  * @param object config explorer configuration
  * @return string
  */
-function registerHooks(config, route, user) {
+function registerHooks(config, user) {
   return {
     //hooking on directory
-    directory: function(tree) {
+    directory: function(tree, path) {
       var l = tree.length
       var found = false
 
@@ -28,7 +28,7 @@ function registerHooks(config, route, user) {
         return '' //don't polute view
       
       //Directory hook wants a <dd> element, adding our route
-      return '<dd><a href="'+route+'?path='+e.dirname+'&key='+user.key+'">M3u</a></dd>'
+      return '<dd><a href="/p/m3u?path='+path+'&key='+user.key+'">M3u</a></dd>'
     }
   }
 }
