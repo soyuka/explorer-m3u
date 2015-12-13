@@ -8,7 +8,7 @@ var eol = require('os').EOL
  * @param Express app our app instances
  * @param object utils explorer utils (see https://github.com/soyuka/explorer/blob/master/Plugins.md 
  */
-function m3uRouter(app, utils) {
+function m3uRouter(app, job, utils, config) {
   var HTTPError = utils.HTTPError
 
   function m3u(req, res, next) {
